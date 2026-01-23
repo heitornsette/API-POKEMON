@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png">
+</head>
+<body class="flex justify-center items-center h-screen bg-gradient-to-b from-blue-500 to-blue-900">
+    <div class="flex flex-col gap-4 w-80 bg-white rounded-lg shadow-2xl p-8">
+        <h1 class="text-2xl font-bold text-center text-blue-600">Pokédex</h1>
+        <input type="text" placeholder="Digite o nome do Pokémon" class="px-4 py-2 border-2 border-blue-300 rounded-lg focus:outline-none focus:border-blue-600" id="nome">
+        <button onclick="buscarPokemons(document.getElementById('nome').value)" class="px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">Pesquisar</button>
+        <div id="pokedex" class="mt-4"></div>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>

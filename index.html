@@ -40,12 +40,12 @@
     <header class="flex p-4 shadow-lg justify-between items-center">
       <div
         class="flex gap-2 justify-center items-center font-bold text-2xl cursor-pointer"
-        onclick="puxarPokemons((url = 'https://pokeapi.co/api/v2/pokemon'))">
+        onclick="puxarPokemons()">
         <img src="img/Background+Shadow.svg" alt="" />
         <p class="">Poké<span class="text-red-600">Dex</span></p>
       </div>
       <div
-        class="flex p-4 bg-gray-100 rounded-2xl w-96 gap-1 shadow border-gray-100 border-2 focus-within:border-gray-500 transition-colors duration-300">
+        class="flex p-4 bg-gray-100 rounded-2xl w-140 gap-1 shadow border-gray-200 border-2 focus-within:border-gray-400 transition-colors duration-300">
         <img src="img/Text.svg" alt="" />
         <input
           type="text"
@@ -53,6 +53,9 @@
           id=""
           placeholder="Pesquise um Pokémon por nome ou número..."
           onkeydown="pesquisarPokemons(event.which, event.target.value)" />
+          <div class="bg-gray-200 rounded-lg p-1 text-gray-600 text-xs">
+            <p>ENTER</p>
+          </div>
       </div>
       <div class="flex gap-2">
         <img src="img/Button.svg" alt="" />
@@ -76,7 +79,7 @@
             Todos
           </button>
         </div>
-        <div class="grid grid-cols-2 gap-3 overflow-y-auto max-h-[60vh] pr-2">
+        <div class="grid grid-cols-2 gap-3 overflow-y-auto  pr-2">
           <button
             onclick="buscarTipos(1)"
             class="flex items-center gap-2 bg-gray-400/10 p-3 rounded-lg cursor-pointer hover:bg-gray-400/20 transition">
@@ -396,7 +399,7 @@
       <div class="flex flex-1 flex-col">
         <div
           id="pokedex"
-          class="grid grid-cols-4 gap-6 pt-10 px-10 flex-1 overflow-y-auto"></div>
+          class="grid grid-cols-4 gap-6 pt-10 px-10 flex-1 overflow-y-auto items-start"></div>
         <div class="py-10 px-10 flex justify-between">
           <button
             class="bg-white flex p-3 rounded-2xl gap-2 border border-gray-300 cursor-pointer"

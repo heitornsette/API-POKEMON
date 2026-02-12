@@ -81,9 +81,9 @@ function renderizarCardPokemon(pokemon) {
 
   const imagem = pokemon.sprites.front_default
 
-  const imagemHtml = imagem 
-  ? `<img src="${imagem}" class="h-32 w-32 object-contain mx-auto my-2 scale-125">` 
-  : `<div class="h-32 w-32 flex items-center justify-center mx-auto my-2 text-gray-400 text-xs"> Pokemon sem imagem </div>`
+  const imagemHtml = imagem
+    ? `<img src="${imagem}" class="h-32 w-32 object-contain mx-auto my-2 scale-125">`
+    : `<div class="h-32 w-32 flex items-center justify-center mx-auto my-2 text-gray-400 text-xs"> Pokemon sem imagem </div>`
 
   pokedex.innerHTML += `
     <div class = " bg-white rounded-3xl p-6 shadow-sm hover:shadow-md  hover:scale-103 transition-all relative flex flex-col justify-between h-auto">
@@ -116,7 +116,9 @@ async function pesquisarPokemons(key, nome) {
     const request = await fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`)
     const response = await request.json()
 
-    listarPokemons(response)
+    pokedex.innerHTML = ""
+
+    renderizarCardPokemon(response)
   }
 }
 

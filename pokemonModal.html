@@ -1,0 +1,154 @@
+<dialog
+  id="pokemonModal"
+  class="backdrop:bg-black/50 rounded-[28px] p-0 w-[980px] max-w-[95vw] overflow-hidden shadow-2xl my-auto mx-auto">
+  <div class="flex h-auto max-h-none">
+    <aside
+      class="relative w-[360px] shrink-0 bg-gradient-to-b from-[#FFF2C7] via-[#FFEAA6] to-[#FFE18A] p-6">
+      <div
+        id="numero"
+        class="pointer-events-none select-none absolute top-6 left-6 text-[92px] font-extrabold tracking-tight text-black/10"></div>
+
+      <div
+        class="mt-20 rounded-2xl bg-white/60 border border-white/70 shadow-lg p-5">
+        <div
+          id="imagem"
+          class="h-[240px] rounded-xl bg-white/70 grid place-items-center overflow-hidden">
+          <div class="w-full h-full grid place-items-center text-slate-400">
+            IMAGEM
+          </div>
+        </div>
+
+        <div id="tipos" class="mt-4 flex gap-2 justify-center"></div>
+      </div>
+
+      <div class="mt-5 grid grid-cols-2 gap-3">
+        <div
+          class="rounded-2xl bg-white/60 border border-white/70 shadow-md px-4 py-3">
+          <p class="text-[11px] font-semibold text-slate-500 tracking-wide">
+            HEIGHT
+          </p>
+          <p id="altura" class="mt-1 text-lg font-extrabold text-slate-900">
+            0.4 m
+          </p>
+        </div>
+        <div
+          class="rounded-2xl bg-white/60 border border-white/70 shadow-md px-4 py-3">
+          <p class="text-[11px] font-semibold text-slate-500 tracking-wide">
+            WEIGHT
+          </p>
+          <p id="peso" class="mt-1 text-lg font-extrabold text-slate-900">
+            6.0 kg
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <section class="relative flex-1 bg-white p-7 overflow-y-auto">
+      <button
+        id="fecharModal"
+        class="absolute top-5 right-5 h-9 w-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 grid place-items-center transition"
+        aria-label="Fechar">
+        ✕
+      </button>
+
+      <header id="descricao" class="flex items-start justify-between">
+        <div class="flex items-baseline gap-3">
+          <h2 id="nome" class="text-3xl font-extrabold text-slate-900">
+            Pikachu
+          </h2>
+          <p id="id" class="text-sm font-semibold text-slate-400">#025</p>
+        </div>
+      </header>
+
+      <p
+        id="textoDescricao"
+        class="mt-3 text-sm leading-6 text-slate-500 max-w-[560px]">
+        When it is angered, it immediately discharges the energy stored in the
+        pouches in its cheeks. This intelligent Pokémon roasts hard berries with
+        electricity to make them tender enough to eat.
+      </p>
+
+      <div class="mt-6">
+        <div
+          class="flex items-center gap-2 text-xs font-extrabold text-slate-700">
+          <span class="inline-block h-2 w-2 rounded-full bg-rose-500"></span>
+          <p class="tracking-wide">BASE STATS</p>
+        </div>
+
+        <div id="baseStats" class="mt-4 space-y-3">
+        </div>
+      </div>
+
+      <div class="mt-7 grid grid-cols-2 gap-4">
+        <div class="rounded-2xl border border-slate-100 bg-slate-50/60 p-4">
+          <div
+            class="flex items-center gap-2 text-xs font-extrabold text-slate-700">
+            <span class="inline-block h-2 w-2 rounded-full bg-rose-500"></span>
+            <p class="tracking-wide">ABILITIES</p>
+          </div>
+
+          <div id="habilidades" class="mt-3 flex gap-2"></div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-100 bg-slate-50/60 p-4">
+          <div
+            class="flex items-center gap-2 text-xs font-extrabold text-slate-700">
+            <span class="inline-block h-2 w-2 rounded-full bg-red-500"></span>
+            <p class="tracking-wide">WEAKNESS</p>
+          </div>
+
+          <div id="fraquezas" class="mt-3"></div>
+        </div>
+        
+      </div>
+      <div class="mt-4">
+          <div
+            class="flex items-center gap-2 text-xs font-extrabold text-slate-700">
+            <span class="inline-block h-2 w-2 rounded-full bg-red-500"></span>
+            <p class="tracking-wide">EVOLUTION CHAIN</p>
+          </div>
+
+          <div
+            class="mt-4 rounded-2xl bg-slate-50/60  border border-slate-100 px-8 py-5">
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col items-center">
+                <div
+                  class="h-24 w-24 rounded-full bg-white/70 border border-white/80 shadow-sm grid place-items-center">
+                  <div
+                    class="h-16 w-16 rounded-xl bg-white border border-slate-200"><img src="" alt="" id="evo1Img"></div>
+                </div>
+                <p class="mt-2 text-sm font-extrabold text-slate-500" id="evo1Name"></p>
+              </div>
+
+              <div class="flex-1 flex items-center justify-center">
+                <div class="text-slate-300 text-2xl font-light">→</div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div
+                  class="h-24 w-24 rounded-full bg-white border border-white/80 shadow-sm grid place-items-center">
+                  <div
+                    class="h-16 w-16 rounded-xl bg-white border border-slate-200"><img src="" alt="" id="evo2Img"></div>
+                </div>
+                <p class="mt-2 text-base font-extrabold text-slate-500" id="evo2Name"></p>
+              </div>
+
+              <div class="flex-1 flex items-center justify-center">
+                <div class="text-slate-300 text-2xl font-light">→</div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div
+                  class="h-24 w-24 rounded-full bg-white/70 border border-white/80 shadow-sm grid place-items-center opacity-80">
+                  <div
+                    class="h-16 w-16 rounded-xl bg-white border border-slate-200">
+                  <img src="" alt="" id="evo3Img"></div>
+                </div>
+                <p class="mt-2 text-sm font-extrabold text-slate-500" id="evo3Name"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+</dialog>
